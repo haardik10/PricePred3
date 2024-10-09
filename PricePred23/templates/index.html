@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Ideal House</title>
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px; /* Adjusted width */
+            height: auto; /* Ensures height adjusts dynamically */
+        }
+
+        label, select {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    
+    <form action="/results" method="POST">
+        <h1>Find Your Ideal House</h1>
+        <label for="bhk">BHK Size:</label>
+        <select name="bhk" id="bhk">
+            <option value="1">1 BHK</option>
+            <option value="2">2 BHK</option>
+            <option value="3">3 BHK</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <select name="location" id="location">
+            <option value="Andheri">Andheri</option>
+            <option value="Bandra">Bandra</option>
+            <option value="Kurla">Kurla</option>
+        </select>
+
+        <label for="price">Price Range:</label>
+        <select name="price" id="price">
+            <option value="1">0 - 20,000</option>
+            <option value="2">20,000 - 40,000</option>
+            <option value="3">40,000+</option>
+        </select>
+
+        <label for="area">Area Range (sq ft):</label>
+        <select name="area" id="area">
+            <option value="1">0 - 500</option>
+            <option value="2">500 - 1000</option>
+            <option value="3">1000+</option>
+        </select>
+
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+</body>
+</html>
